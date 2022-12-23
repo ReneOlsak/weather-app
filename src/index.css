@@ -6,4 +6,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(255, 240, 247);
+  background: radial-gradient(
+    circle,
+    rgba(255, 240, 247, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
+.dark {
+  background: rgb(42, 37, 40);
+  background: radial-gradient(
+    circle,
+    rgba(42, 37, 40, 1) 10%,
+    rgba(21, 35, 51, 1) 100%
+  );
 }

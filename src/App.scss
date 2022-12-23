@@ -1,0 +1,73 @@
+@import 'variables.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app {
+  color: $text-color;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.app-box {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 1px rgb(184, 184, 184);
+  backdrop-filter: blur(10px);
+  border-radius: 1%;
+  width: 100%;
+  max-width: 500px;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.title {
+  font-weight: 100;
+  font-size: 2.25rem;
+}
+
+.title-forecast {
+  font-weight: 900;
+}
+
+.title-info {
+  font-weight: 100;
+  font-size: 0.9rem;
+}
+
+.app-input {
+  margin-top: 10px;
+  padding: 6px 8px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border: 1px solid rgb(184, 184, 184);
+  box-shadow: 0px 0px 1px rgb(184, 184, 184);
+  outline: none;
+  transition: 0.1s;
+}
+
+.app-input:hover {
+  box-shadow: $hover-color;
+}
+
+.search-button {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border: 1px solid rgb(184, 184, 184);
+  border-left: none;
+  box-shadow: 0px 0px 1px rgb(184, 184, 184);
+  padding: 6px 8px;
+  background-color: transparent;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  box-shadow: $hover-color;
+}
