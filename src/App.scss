@@ -14,17 +14,13 @@
 }
 
 .app-box {
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(255, 255, 255, 0.2);
-  box-shadow: 0px 0px 1px rgb(184, 184, 184);
-  backdrop-filter: blur(10px);
-  border-radius: 1%;
-  width: 100%;
+  @include basic-background;
+  flex-direction: column;  
   max-width: 500px;
   align-items: center;
-  justify-content: center;
   padding: 25px;
+  justify-content: center;
+  display: flex;
 }
 
 .title {
@@ -101,4 +97,42 @@
 
 .one-option:hover {
   background-color: rgba(255, 240, 247);
+}
+
+.forecast-container {
+  @include basic-background;
+  max-width: 500px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.forecast-top {
+  text-align: center;
+}
+
+.forecast-cloud-images {
+  display: flex;
+  overflow-x: scroll;
+  max-width: 400px;
+}
+
+.forecast-details {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.sunrise {
+  @include basic-background;
+  width: 130px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sunset {
+ @extend .sunrise
 }
