@@ -1,6 +1,14 @@
+import {
+  getHumidityValue,
+  getPop,
+  getSunTime,
+  getVisibilityValue,
+  getWindDirection,
+} from '../helper functions/Helpers'
 import { forecastType } from '../types'
 import Sunrise from './Icons/Sunrise'
 import Sunset from './Icons/Sunset'
+import Box from './Box'
 
 type Props = {
   data: forecastType
@@ -32,7 +40,7 @@ const Forecast = ({ data }: Props): JSX.Element => {
         <section className="forecast-cloud-images">
           {data.list.map((item, i) => (
             <div key={i}>
-              <p>{i === 0 ? "Now" : new Date(item.dt * 1000).getHours()}</p>
+              <p>{i === 0 ? 'Now' : new Date(item.dt * 1000).getHours()}</p>
               <img
                 src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}
                 alt={`weather-icon-${item.weather[0].description}`}
@@ -46,11 +54,60 @@ const Forecast = ({ data }: Props): JSX.Element => {
 
         <section className="forecast-details">
           <div className="sunrise">
-            <Sunrise />
+            <Sunrise /> <span>{getSunTime(data.sunrise)}</span>
           </div>
           <div className="sunset">
-            <Sunset />
+            <Sunset /> <span>{getSunTime(data.sunset)}</span>
           </div>
+        </section>
+
+        <section className="boxes-container">
+          <Box
+            icon="wind"
+            title="Wind"
+            info={`${Math.round(today.wind.speed)} km/h`}
+            description={`${getWindDirection(
+              Math.round(today.wind.deg)
+            )}, gusts ${today.wind.gust.toFixed(1)} km/h`}
+          />
+          <Box
+            icon="feels"
+            title="Feels like"
+            info={<Temperature temp={Math.round(today.main.feels_like)} />}
+            description={`Feels ${
+              Math.round(today.main.feels_like) < Math.round(today.main.temp)
+                ? 'colder'
+                : 'warmer'
+            }`}
+          />
+          <Box
+            icon="humidity"
+            title="Humidity"
+            info={`${today.main.humidity} %`}
+            description={getHumidityValue(today.main.humidity)}
+          />
+          <Box
+            icon="pop"
+            title="Precipitation"
+            info={`${Math.round(today.pop)} %`}
+            description={`${getPop(today.pop)}, clouds at ${
+              today.clouds.all
+            } %`}
+          />
+          <Box
+            icon="pressure"
+            title="Pressure"
+            info={`${Math.round(today.main.pressure)} hPa`}
+            description={`${
+              Math.round(today.main.pressure) < 1013 ? 'Lower' : 'Higher'
+            } than standard`}
+          />
+          <Box
+            icon="visibility"
+            title="Visibility"
+            info={`${(today.visibility / 1000).toFixed()} km`}
+            description={getVisibilityValue(today.visibility)}
+          />
         </section>
       </div>
     </div>
