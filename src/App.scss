@@ -7,25 +7,29 @@
 }
 
 .app {
-  color: $text-color;
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: relative;
   min-height: 100vh;
 }
 
 .app-box {
   @include basic-background;
-  flex-direction: column;  
-  max-width: 500px;
-  align-items: center;
-  padding: 25px;
-  justify-content: center;
+  color: $text-color;
   display: flex;
+  height: 80vh;
+  width: 65vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 280px;  
 }
 
 .title {
   font-weight: 100;
-  font-size: 2.25rem;
+  font-size: 4rem;
 }
 
 .title-forecast {
@@ -34,7 +38,7 @@
 
 .title-info {
   font-weight: 100;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
 }
 
 .app-input {
@@ -75,7 +79,6 @@
 .options-list {
   position: absolute;
   background-color: $light-color;
-  
   border-radius: 1%;
   left: 1px;
   right: 1px;
@@ -99,29 +102,66 @@
   background-color: rgba(255, 240, 247);
 }
 
+@media screen and (max-width: 1000px) {
+  .title {
+    font-size: 3.5rem;
+  }
+  .title-info {
+    font-size: 1.3rem;
+  }
+  .app-box {
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    font-size: 3rem;
+  }
+  .title-info {
+    font-size: 1.1rem;
+  }
+  .app-box {
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 507px) {
+  .title {
+    margin-left: 10%;
+    margin-right: 22%;
+  }
+  .title-info {
+    margin-left: 10%;
+    margin-right: 22%;
+  }
+  .app-box {
+    width: 90vw;
+    height: 95vh;
+  }
+}
+
 .forecast-container {
   @include basic-background;
-  max-width: 500px;
-  min-height: 100vh;
   display: flex;
-  justify-content: center;
+  height: 80vh;
+  width: 65vw;
 }
 
 .forecast-top {
-  text-align: center;
+  margin: 4%;
 }
 
 .forecast-cloud-images {
   display: flex;
   overflow-x: scroll;
-  max-width: 400px;
+  max-width: 42vw;
+  margin-left: 4%;
 }
 
 .forecast-details {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
   margin-top: 10px;
+  margin-left: 4%;
 }
 
 .sunrise {
@@ -135,15 +175,31 @@
 }
 
 .sunset {
- @extend .sunrise;
+  @extend .sunrise;
 }
 
 .boxes-container {
-  @extend .forecast-details;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 .box-container {
- @include basic-background;
- width: 130px;
- height: 130px;
+  @include basic-background;
+  width: 130px;
+  height: 130px;
+}
+
+
+.forecast-right-part {
+  background-color: rgb(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 1px rgb(184, 184, 184);
+  backdrop-filter: blur(10px);
+  border-top-right-radius: 1%;
+  border-bottom-right-radius: 1%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 19vw
 }

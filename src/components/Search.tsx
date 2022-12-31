@@ -33,7 +33,7 @@ const Search = ({
           ></input>
 
           <button onClick={onSubmit} className="search-button">
-            search
+            Search
           </button>
 
           <ul className="options-list">

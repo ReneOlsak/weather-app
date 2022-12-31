@@ -109,6 +109,21 @@ const Forecast = ({ data }: Props): JSX.Element => {
             description={getVisibilityValue(today.visibility)}
           />
         </section>
+        <div className="forecast-right-part">
+          <input type="text" />
+          <button>Search</button>
+          <h2 className="forecast-location">
+            {data.name}, {data.country}
+          </h2>
+          <h1>
+            <Temperature temp={Math.round(today.main.temp)} />
+          </h1>
+          <p>
+            {today.weather[0].main} {today.weather[0].description}
+          </p>
+          H: <Temperature temp={Math.ceil(today.main.temp_max)} /> L:{' '}
+          <Temperature temp={Math.floor(today.main.temp_min)} />
+        </div>
       </div>
     </div>
   )
