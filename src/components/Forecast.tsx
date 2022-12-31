@@ -27,14 +27,8 @@ const Forecast = ({ data }: Props): JSX.Element => {
           <h2 className="forecast-location">
             {data.name}, {data.country}
           </h2>
-          <h1>
-            <Temperature temp={Math.round(today.main.temp)} />
-          </h1>
-          <p>
-            {today.weather[0].main} {today.weather[0].description}
-          </p>
-          H: <Temperature temp={Math.ceil(today.main.temp_max)} /> L:{' '}
-          <Temperature temp={Math.floor(today.main.temp_min)} />
+          <h4>Today, 31.12.2022</h4>
+          <h3>Good Morning</h3>
         </section>
 
         <section className="forecast-cloud-images">
@@ -52,63 +46,47 @@ const Forecast = ({ data }: Props): JSX.Element => {
           ))}
         </section>
 
-        <section className="forecast-details">
-          <div className="sunrise">
-            <Sunrise /> <span>{getSunTime(data.sunrise)}</span>
+        <section className="boxes-container">
+          <div className="left-boxes">
+            <div className="pressure-visibilty">
+              <Box
+                icon="pressure"
+                title="Pressure"
+                info={`${Math.round(today.main.pressure)} hPa`}
+                description={`${
+                  Math.round(today.main.pressure) < 1013 ? 'Lower' : 'Higher'
+                } than standard`}
+              />
+              <Box
+                icon="visibility"
+                title="Visibility"
+                info={`${(today.visibility / 1000).toFixed()} km`}
+                description={getVisibilityValue(today.visibility)}
+              />
+            </div>
+            <div className="precipitation">
+              <Box
+                icon="pop"
+                title="Precipitation"
+                info={`${Math.round(today.pop)} %`}
+                description={`${getPop(today.pop)}, clouds at ${
+                  today.clouds.all
+                } %`}
+              />
+            </div>
           </div>
-          <div className="sunset">
-            <Sunset /> <span>{getSunTime(data.sunset)}</span>
+
+          <div className="sunrise-sunset">
+            <h4 className="sunrise-sunset-title">Sunrise & Sunset</h4>
+            <div className="sunrise">
+              <Sunrise /> <span>{getSunTime(data.sunrise)}</span>
+            </div>
+            <div className="sunset">
+              <Sunset /> <span>{getSunTime(data.sunset)}</span>
+            </div>
           </div>
         </section>
 
-        <section className="boxes-container">
-          <Box
-            icon="wind"
-            title="Wind"
-            info={`${Math.round(today.wind.speed)} km/h`}
-            description={`${getWindDirection(
-              Math.round(today.wind.deg)
-            )}, gusts ${today.wind.gust.toFixed(1)} km/h`}
-          />
-          <Box
-            icon="feels"
-            title="Feels like"
-            info={<Temperature temp={Math.round(today.main.feels_like)} />}
-            description={`Feels ${
-              Math.round(today.main.feels_like) < Math.round(today.main.temp)
-                ? 'colder'
-                : 'warmer'
-            }`}
-          />
-          <Box
-            icon="humidity"
-            title="Humidity"
-            info={`${today.main.humidity} %`}
-            description={getHumidityValue(today.main.humidity)}
-          />
-          <Box
-            icon="pop"
-            title="Precipitation"
-            info={`${Math.round(today.pop)} %`}
-            description={`${getPop(today.pop)}, clouds at ${
-              today.clouds.all
-            } %`}
-          />
-          <Box
-            icon="pressure"
-            title="Pressure"
-            info={`${Math.round(today.main.pressure)} hPa`}
-            description={`${
-              Math.round(today.main.pressure) < 1013 ? 'Lower' : 'Higher'
-            } than standard`}
-          />
-          <Box
-            icon="visibility"
-            title="Visibility"
-            info={`${(today.visibility / 1000).toFixed()} km`}
-            description={getVisibilityValue(today.visibility)}
-          />
-        </section>
         <div className="forecast-right-part">
           <input type="text" />
           <button>Search</button>
@@ -123,6 +101,30 @@ const Forecast = ({ data }: Props): JSX.Element => {
           </p>
           H: <Temperature temp={Math.ceil(today.main.temp_max)} /> L:{' '}
           <Temperature temp={Math.floor(today.main.temp_min)} />
+          <Box
+            icon="feels"
+            title="Feels like"
+            info={<Temperature temp={Math.round(today.main.feels_like)} />}
+            description={`Feels ${
+              Math.round(today.main.feels_like) < Math.round(today.main.temp)
+                ? 'colder'
+                : 'warmer'
+            }`}
+          />
+          <Box
+            icon="wind"
+            title="Wind"
+            info={`${Math.round(today.wind.speed)} km/h`}
+            description={`${getWindDirection(
+              Math.round(today.wind.deg)
+            )}, gusts ${today.wind.gust.toFixed(1)} km/h`}
+          />
+          <Box
+            icon="humidity"
+            title="Humidity"
+            info={`${today.main.humidity} %`}
+            description={getHumidityValue(today.main.humidity)}
+          />
         </div>
       </div>
     </div>

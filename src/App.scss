@@ -24,7 +24,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 280px;  
+  min-width: 280px;
 }
 
 .title {
@@ -145,7 +145,7 @@
   @include basic-background;
   display: flex;
   height: 80vh;
-  width: 65vw;
+  width: 62.5vw;
 }
 
 .forecast-top {
@@ -159,37 +159,56 @@
   margin-left: 4%;
 }
 
-.forecast-details {
-  margin-top: 10px;
-  margin-left: 4%;
+.boxes-container {
+  display: flex;
+  gap: 15px;
 }
 
-.sunrise {
+.left-boxes {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 4%;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.pressure-visibilty {
   @include basic-background;
-  width: 130px;
-  height: 50px;
+  height: 21vh;
+}
+
+.precipitation {
+  @include basic-background;
+  height: 21vh;
+}
+
+.sunrise-sunset {
+  @include basic-background;
+  margin-top: 20px;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+}
+
+.sunrise-sunset-title {
+  margin-top: 15px;
+}
+
+.sunrise {
+  border-radius: 10px;
+  margin-top: 10px;
+  background-color: lightgreen;
+  width: 85%;
+  height: 9vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .sunset {
   @extend .sunrise;
 }
-
-.boxes-container {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.box-container {
-  @include basic-background;
-  width: 130px;
-  height: 130px;
-}
-
 
 .forecast-right-part {
   background-color: rgb(255, 255, 255, 0.5);
@@ -201,5 +220,5 @@
   top: 0;
   right: 0;
   height: 100%;
-  width: 19vw
+  width: 19vw;
 }
