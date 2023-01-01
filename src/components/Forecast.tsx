@@ -20,6 +20,7 @@ const Temperature = ({ temp }: { temp: number }): JSX.Element => (
 
 const Forecast = ({ data }: Props): JSX.Element => {
   const today = data.list[0]
+  const consolee = console.log(data.list[0].weather)
   return (
     <div className="forecast-container">
       <div>
@@ -33,7 +34,7 @@ const Forecast = ({ data }: Props): JSX.Element => {
 
         <section className="forecast-cloud-images">
           {data.list.map((item, i) => (
-            <div key={i}>
+            <div className="one-cloud-img" key={i}>
               <p>{i === 0 ? 'Now' : new Date(item.dt * 1000).getHours()}</p>
               <img
                 src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}
@@ -48,7 +49,7 @@ const Forecast = ({ data }: Props): JSX.Element => {
 
         <section className="boxes-container">
           <div className="left-boxes">
-            <div className="pressure-visibilty">
+            <div className="pressure">
               <Box
                 icon="pressure"
                 title="Pressure"
@@ -57,6 +58,8 @@ const Forecast = ({ data }: Props): JSX.Element => {
                   Math.round(today.main.pressure) < 1013 ? 'Lower' : 'Higher'
                 } than standard`}
               />
+            </div>
+            <div className="visibility">
               <Box
                 icon="visibility"
                 title="Visibility"
@@ -64,6 +67,7 @@ const Forecast = ({ data }: Props): JSX.Element => {
                 description={getVisibilityValue(today.visibility)}
               />
             </div>
+
             <div className="precipitation">
               <Box
                 icon="pop"
@@ -79,52 +83,77 @@ const Forecast = ({ data }: Props): JSX.Element => {
           <div className="sunrise-sunset">
             <h4 className="sunrise-sunset-title">Sunrise & Sunset</h4>
             <div className="sunrise">
-              <Sunrise /> <span>{getSunTime(data.sunrise)}</span>
+              <Sunrise />
+              {getSunTime(data.sunrise)}
+              <span className="sunrise-info">Sunset</span>
             </div>
             <div className="sunset">
-              <Sunset /> <span>{getSunTime(data.sunset)}</span>
+              <Sunset />
+              {getSunTime(data.sunset)}
+              <span className="sunset-info">Sunset</span>
+            </div>
+            <h4 className="high-low-temp">High and low</h4>
+            <div className="max-min-temp">
+              <div className="max">
+                <Temperature temp={Math.ceil(today.main.temp_max)} />{' '}
+              </div>
+              <div className="min">
+                <Temperature temp={Math.floor(today.main.temp_min)} />
+              </div>
             </div>
           </div>
         </section>
 
         <div className="forecast-right-part">
-          <input type="text" />
-          <button>Search</button>
-          <h2 className="forecast-location">
-            {data.name}, {data.country}
-          </h2>
-          <h1>
-            <Temperature temp={Math.round(today.main.temp)} />
-          </h1>
-          <p>
-            {today.weather[0].main} {today.weather[0].description}
-          </p>
-          H: <Temperature temp={Math.ceil(today.main.temp_max)} /> L:{' '}
-          <Temperature temp={Math.floor(today.main.temp_min)} />
-          <Box
-            icon="feels"
-            title="Feels like"
-            info={<Temperature temp={Math.round(today.main.feels_like)} />}
-            description={`Feels ${
-              Math.round(today.main.feels_like) < Math.round(today.main.temp)
-                ? 'colder'
-                : 'warmer'
-            }`}
-          />
-          <Box
-            icon="wind"
-            title="Wind"
-            info={`${Math.round(today.wind.speed)} km/h`}
-            description={`${getWindDirection(
-              Math.round(today.wind.deg)
-            )}, gusts ${today.wind.gust.toFixed(1)} km/h`}
-          />
-          <Box
-            icon="humidity"
-            title="Humidity"
-            info={`${today.main.humidity} %`}
-            description={getHumidityValue(today.main.humidity)}
-          />
+          <div className="forecast-input-button">
+            <input type="text" className="right-part-search-input" />
+            <button className="right-part-search-button">Search</button>
+          </div>
+
+          <div className="forecast-location-details">
+            <h3 className="forecast-location-right">{data.name}</h3>
+            <img
+              src={`http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`}
+              className="forecast-location-img"
+            />
+            <h4 className="forecast-location-main-temp">
+              <Temperature temp={Math.round(today.main.temp)} />
+            </h4>
+            <p className="forecast-location-description">
+              {today.weather[0].main} {today.weather[0].description}
+            </p>
+          </div>
+
+          <div className="feels-like">
+            <Box
+              icon="feels"
+              title="Feels like"
+              info={<Temperature temp={Math.round(today.main.feels_like)} />}
+              description={`Feels ${
+                Math.round(today.main.feels_like) < Math.round(today.main.temp)
+                  ? 'colder'
+                  : 'warmer'
+              }`}
+            />
+          </div>
+          <div className="forecast-wind">
+            <Box
+              icon="wind"
+              title="Wind"
+              info={`${Math.round(today.wind.speed)} km/h`}
+              description={`${getWindDirection(
+                Math.round(today.wind.deg)
+              )}, gusts ${today.wind.gust.toFixed(1)} km/h`}
+            />
+          </div>
+          <div className="forecast-humidity">
+            <Box
+              icon="humidity"
+              title="Humidity"
+              info={`${today.main.humidity} %`}
+              description={getHumidityValue(today.main.humidity)}
+            />
+          </div>
         </div>
       </div>
     </div>

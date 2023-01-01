@@ -162,6 +162,14 @@
   overflow-x: scroll;
   max-width: 42vw;
   margin-left: 4%;
+  height: 21vh;
+  text-align: center;
+}
+
+.forecast-cloud-images img {
+  width: 120px;
+  height: 120px;
+  margin-right: 10px;
 }
 
 .boxes-container {
@@ -178,13 +186,68 @@
   gap: 15px;
 }
 
-.pressure-visibilty {
+.pressure {
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0px 0px 1px rgb(184, 184, 184);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   border-radius: 1%;
-  height: 21vh;
+  height: 12vh;
+  display: flex;
+}
+
+.pressure .box-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+  margin-left: 5%;
+  margin-right: 6%;
+  width: 100%;
+}
+
+.pressure svg {
+  height: 50px;
+  width: 50px;
+  margin-right: 12px;
+}
+
+.pressure .box-info-description {
+  margin-left: 40px;
+}
+
+.visibility {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 1px rgb(184, 184, 184);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 1%;
+  height: 12vh;
+  display: flex;
+}
+
+.visibility .box-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+  margin-left: 5%;
+  margin-right: 6%;
+  width: 100%;
+}
+
+.visibility svg {
+  height: 50px;
+  width: 50px;
+  margin-right: 12px;
+}
+
+.visibility .box-info-description {
+  margin-right: 10px;
+}
+
+.visibility .box-info-description {
+  margin-left: 40px;
 }
 
 .precipitation {
@@ -193,7 +256,28 @@
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   border-radius: 1%;
-  height: 21vh;
+  height: 12vh;
+  display: flex;
+}
+
+.precipitation .box-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+  margin-left: 5%;
+  margin-right: 6%;
+  width: 100%;
+}
+
+.precipitation svg {
+  height: 50px;
+  width: 50px;
+  margin-right: 12px;
+}
+
+.precipitation .box-info-description {
+  margin-left: 40px;
 }
 
 .sunrise-sunset {
@@ -216,11 +300,29 @@
 .sunrise, .sunset {
   border-radius: 10px;
   margin-top: 10px;
-  background-color: lightgreen;
-  width: 85%;
+  background-color: rgb(244, 227, 186);
+  width: 80%;
   height: 9vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+  font-size: 22px;
+  color: rgb(41, 132, 222);
+}
+
+.sunrise-info {
+  color: grey;
+}
+
+.sunset-info {
+  color: grey;
+}
+
+.sunrise svg, .sunset svg {
+  width: 60px;
+  height: 60px;
+  color: gold;
 }
 
 .forecast-right-part {
@@ -235,4 +337,199 @@
   right: 0;
   height: 100%;
   width: 19vw;
+}
+
+.forecast-input-button {
+  display: flex;
+  justify-content: left;
+  margin: 10% 8%;
+}
+
+.right-part-search-input {
+  width: 8vw;
+  height: 2.5vh;
+}
+
+.forecast-location-right {
+  position: absolute;
+  margin-top: 10px;
+}
+
+.forecast-location-main-temp {
+  font-size: 45px;
+  margin-top: -30px;
+}
+
+.forecast-location-description {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.forecast-location-img {
+  width: 8vw;
+  margin-top: 5px;
+}
+
+.max-min-temp {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 25px;
+}
+
+.right-part-search-button {
+  background-color: transparent;
+  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 1px rgb(184, 184, 184);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 1%;
+}
+
+.box-img-title {
+  display: flex;
+  align-items: center;
+}
+
+.forecast-location-details {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 1px rgb(184, 184, 184);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 1%;
+  background-color: rgb(37, 183, 232);
+  margin: 0% 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  border-radius: 20px;
+}
+
+.forecast-wind {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 1px rgb(184, 184, 184);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 1%;
+  color: white;
+  margin: 7% 8%;
+  background-color: rgb(255, 97, 136);
+  border-radius: 10px;
+  padding: 4%;
+}
+
+.forecast-wind .box-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.forecast-wind svg {
+  width: 50px;
+  height: 50px;
+}
+
+.forecast-wind .box-img-title {
+  flex-direction: column;
+}
+
+.forecast-wind .box-info-description {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feels-like {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 1px rgb(184, 184, 184);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 1%;
+  margin: 7% 8%;
+  color: white;
+  background-color: rgb(255, 172, 62);
+  border-radius: 10px;
+  padding: 4%;
+}
+
+.feels-like .box-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.feels-like svg {
+  width: 50px;
+  height: 50px;
+}
+
+.feels-like .box-img-title {
+  flex-direction: column;
+}
+
+.feels-like .box-info-description {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.forecast-humidity {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 1px rgb(184, 184, 184);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 1%;
+  margin: 7% 8%;
+  color: white;
+  background-color: rgb(255, 172, 62);
+  border-radius: 10px;
+  padding: 4%;
+}
+
+.forecast-humidity .box-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.forecast-humidity svg {
+  width: 50px;
+  height: 50px;
+}
+
+.forecast-humidity .box-img-title {
+  flex-direction: column;
+}
+
+.forecast-humidity .box-info-description {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.high-low-temp {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.max, .min {
+  background-color: rgba(234, 227, 150, 0.726);
+  width: 8vw;
+  height: 7vh;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.min {
+  background-color: rgb(165, 165, 165);
+  color: white;
 }/*# sourceMappingURL=App.css.map */

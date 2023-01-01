@@ -1,5 +1,5 @@
 const Sunrise = (): JSX.Element => (
-  <svg
+  <svg className="icon-size"
     width="20"
     height="20"
     viewBox="0 0 108 108"

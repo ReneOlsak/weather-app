@@ -25,3 +25,20 @@ $light-color: white;
   width: 130px;
   height: 130px;
 }
+
+@mixin box-info-description {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin box-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+  margin-left: 5%;
+  margin-right: 6%;
+  width: 100%;
+}
