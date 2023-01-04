@@ -188,7 +188,7 @@ const Forecast = ({
             {today.weather[0].main} {today.weather[0].description}
           </p>
         </div>
-
+              
         <div className="feels-like">
           <Box
             icon="feels"
