@@ -588,7 +588,7 @@
 }
 
 .forecast-options-list {
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 1%;
@@ -602,6 +602,7 @@
 
 .forecast-left-part {
   max-width: 43vw;
+  z-index: 1;
 }
 
 @media screen and (max-width: 1650px) {
@@ -891,6 +892,7 @@
   .forecast-input-button {
     justify-content: center;
     top: -45px;
+    z-index: 3;
   }
   .forecast-input-button input {
     width: 150px;
@@ -1015,7 +1017,7 @@
     display: none;
   }
   .sunrise-sunset {
-    height: 36.5vh;
+    height: 36.65vh;
     font-size: 21px;
     margin-right: 4%;
   }
@@ -1048,5 +1050,436 @@
   }
   .one-cloud-img {
     font-size: 21px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .forecast-container {
+    height: 1500px;
+  }
+  .feels-like {
+    margin-top: 80px;
+  }
+  .forecast-wind {
+    margin-top: 80px;
+  }
+  .forecast-humidity {
+    margin-top: 80px;
+  }
+  .forecast-cloud-images {
+    height: 18vh;
+  }
+  .pressure {
+    font-size: 21px;
+  }
+  .visibility {
+    font-size: 21px;
+  }
+  .precipitation {
+    font-size: 21px;
+  }
+  .sunrise-sunset {
+    height: 37vh;
+  }
+}
+@media screen and (max-width: 769px) {
+  .forecast-container {
+    height: 1260px;
+  }
+  .feels-like {
+    margin-top: 90px;
+    font-size: 18px;
+  }
+  .feels-like .box-info {
+    font-size: 23px;
+  }
+  .forecast-wind {
+    margin-top: 90px;
+    font-size: 18px;
+  }
+  .forecast-wind .box-info {
+    font-size: 23px;
+  }
+  .forecast-humidity {
+    margin-top: 90px;
+    font-size: 18px;
+  }
+  .forecast-humidity .box-info {
+    font-size: 23px;
+  }
+  .forecast-cloud-images {
+    height: 20.5vh;
+  }
+  .pressure {
+    font-size: 20px;
+  }
+  .visibility {
+    font-size: 20px;
+  }
+  .precipitation {
+    font-size: 20px;
+  }
+  .one-cloud-img {
+    font-size: 19px;
+  }
+  .sunrise-sunset {
+    font-size: 20px;
+    height: 37.3vh;
+  }
+  .sunrise, .sunset {
+    font-size: 22px;
+  }
+  .sunrise svg, .sunset svg {
+    width: 60px;
+    height: 60px;
+  }
+  .max, .min {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .forecast-container {
+    height: 840px;
+  }
+  .forecast-location-details {
+    height: 20vw;
+    margin-top: -95px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .forecast-top {
+    font-size: 12px;
+  }
+  .forecast-top h3 {
+    font-size: 14px;
+  }
+  .forecast-top h4 {
+    font-size: 19px;
+  }
+  .forecast-location-details h4 {
+    font-size: 40px;
+  }
+  .forecast-input-button {
+    justify-content: center;
+    top: -20px;
+  }
+  .forecast-input-button input {
+    width: 100px;
+  }
+  .forecast-location-details img {
+    width: 120px;
+    height: 120px;
+  }
+  .forecast-location-img {
+    margin-bottom: 15px;
+  }
+  .feels-like {
+    margin-top: 90px;
+    font-size: 12px;
+    width: 20vw;
+    height: 10vh;
+    padding: 15px;
+  }
+  .feels-like svg {
+    width: 35px;
+    height: 35px;
+  }
+  .feels-like .box-info {
+    font-size: 17px;
+  }
+  .forecast-wind {
+    margin-top: 90px;
+    font-size: 12px;
+    width: 20vw;
+    height: 10vh;
+    padding: 15px;
+  }
+  .forecast-wind svg {
+    width: 35px;
+    height: 35px;
+  }
+  .forecast-wind .box-info {
+    font-size: 17px;
+  }
+  .forecast-humidity {
+    margin-top: 90px;
+    font-size: 12px;
+    width: 20vw;
+    height: 10vh;
+    padding: 15px;
+  }
+  .forecast-humidity svg {
+    width: 35px;
+    height: 35px;
+  }
+  .forecast-humidity .box-info {
+    font-size: 17px;
+  }
+  .forecast-cloud-images img {
+    width: 110px;
+    height: 110px;
+  }
+  .forecast-cloud-images {
+    height: 23.5vh;
+  }
+  .pressure {
+    font-size: 14px;
+  }
+  .pressure svg {
+    width: 35px;
+    height: 35px;
+    margin-right: 4%;
+  }
+  .visibility {
+    font-size: 14px;
+  }
+  .visibility svg {
+    width: 35px;
+    height: 35px;
+    margin-right: 4%;
+  }
+  .precipitation {
+    font-size: 14px;
+  }
+  .precipitation svg {
+    width: 35px;
+    height: 35px;
+    margin-right: 4%;
+  }
+  .one-cloud-img {
+    font-size: 15px;
+  }
+  .sunrise-sunset {
+    font-size: 15px;
+    height: 38.5vh;
+  }
+  .sunrise, .sunset {
+    font-size: 17px;
+  }
+  .sunrise svg, .sunset svg {
+    width: 40px;
+    height: 40px;
+  }
+  .max, .min {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 415px) {
+  .forecast-container {
+    height: 890px;
+  }
+  .forecast-location-details {
+    height: 20vw;
+    margin-top: -85px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .forecast-top {
+    font-size: 10px;
+  }
+  .forecast-top h3 {
+    font-size: 12px;
+  }
+  .forecast-top h4 {
+    font-size: 17px;
+  }
+  .forecast-location-details h4 {
+    font-size: 35px;
+  }
+  .forecast-input-button {
+    justify-content: center;
+    top: -19px;
+  }
+  .forecast-input-button input {
+    width: 80px;
+  }
+  .forecast-location-details img {
+    width: 120px;
+    height: 120px;
+  }
+  .forecast-location-img {
+    margin-bottom: 15px;
+  }
+  .feels-like {
+    margin-top: 110px;
+    font-size: 10px;
+    width: 22vw;
+    height: 9vh;
+    padding: 7px;
+  }
+  .feels-like svg {
+    display: none;
+  }
+  .feels-like .box-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .feels-like .box-img-title {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    font-size: 15px;
+  }
+  .feels-like .box-info {
+    font-size: 23px;
+    text-align: center;
+  }
+  .forecast-wind {
+    margin-top: 110px;
+    font-size: 10px;
+    width: 22vw;
+    height: 9vh;
+    padding: 7px;
+  }
+  .forecast-wind .box-img-title {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 10px;
+    font-size: 15px;
+  }
+  .forecast-wind .box-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .forecast-wind svg {
+    display: none;
+  }
+  .forecast-wind .box-info {
+    font-size: 23px;
+    text-align: center;
+  }
+  .forecast-humidity {
+    margin-top: 110px;
+    font-size: 10px;
+    width: 22vw;
+    height: 9vh;
+    padding: 7px;
+  }
+  .forecast-humidity .box-img-title {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 5px;
+    font-size: 15px;
+  }
+  .forecast-humidity .box-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .forecast-humidity svg {
+    display: none;
+  }
+  .forecast-humidity .box-info {
+    font-size: 23px;
+    text-align: center;
+  }
+  .forecast-cloud-images img {
+    width: 110px;
+    height: 105px;
+  }
+  .forecast-cloud-images {
+    height: 17.5vh;
+    margin-top: 270px;
+  }
+  .one-cloud-img {
+    font-size: 13px;
+  }
+  .pressure {
+    font-size: 13px;
+  }
+  .pressure svg {
+    display: none;
+  }
+  .visibility {
+    font-size: 13px;
+  }
+  .visibility svg {
+    display: none;
+  }
+  .precipitation {
+    font-size: 13px;
+  }
+  .precipitation svg {
+    display: none;
+  }
+  .sunrise-sunset {
+    font-size: 13px;
+    height: 37.8vh;
+  }
+  .sunrise, .sunset {
+    font-size: 15px;
+  }
+  .sunrise svg, .sunset svg {
+    width: 35px;
+    height: 35px;
+  }
+  .max, .min {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 413px) {
+  .forecast-container {
+    height: 910px;
+  }
+}
+@media screen and (max-width: 394px) {
+  .forecast-container {
+    height: 850px;
+  }
+  .feels-like {
+    margin-top: 115px;
+  }
+  .forecast-wind {
+    margin-top: 115px;
+  }
+  .forecast-humidity {
+    margin-top: 115px;
+  }
+  .forecast-cloud-images {
+    height: 19vh;
+    margin-top: 260px;
+  }
+}
+@media screen and (max-width: 391px) {
+  .forecast-container {
+    height: 840px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .forecast-top {
+    font-size: 10px;
+  }
+  .forecast-top h4 {
+    font-size: 16px;
+  }
+  .right-part-search-input {
+    max-width: 60px;
+  }
+  .forecast-input-button {
+    margin-top: 43px;
+  }
+  .forecast-container {
+    height: 750px;
+  }
+  .feels-like {
+    margin-top: 120px;
+  }
+  .forecast-wind {
+    margin-top: 120px;
+  }
+  .forecast-humidity {
+    margin-top: 120px;
+  }
+  .forecast-cloud-images {
+    height: 24vh;
+    margin-top: 240px;
+  }
+  .forecast-cloud-images img {
+    width: 100px;
+    height: 100px;
+  }
+  .sunrise-sunset {
+    height: 39vh;
   }
 }/*# sourceMappingURL=App.css.map */
