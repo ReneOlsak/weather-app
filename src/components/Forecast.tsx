@@ -185,7 +185,10 @@ const Forecast = ({
             <Temperature temp={Math.round(today.main.temp)} />
           </h4>
           <p className="forecast-location-description">
-            {today.weather[0].main} {today.weather[0].description}
+            <span className="forecast-location-description-black">
+              {today.weather[0].main}
+            </span>{' '}
+            - {today.weather[0].description}
           </p>
         </div>
 

@@ -18,7 +18,7 @@ const useWeather = () => {
       .then((data) => setInputOptions(data))
   }
   const onInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value.trim()
+    const value = e.target.value
     setInputValue(value)
     if (value === '') return
     getSearchOptions(value)

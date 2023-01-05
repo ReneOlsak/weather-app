@@ -1051,8 +1051,14 @@
   .one-cloud-img {
     font-size: 21px;
   }
+  .forecast-options-list {
+    margin-left: 265px;
+  }
 }
 @media screen and (max-width: 820px) {
+  .forecast-options-list {
+    margin-left: 225px;
+  }
   .forecast-container {
     height: 1500px;
   }
@@ -1082,6 +1088,9 @@
   }
 }
 @media screen and (max-width: 769px) {
+  .forecast-options-list {
+    margin-left: 205px;
+  }
   .forecast-container {
     height: 1260px;
   }
@@ -1137,6 +1146,10 @@
   }
 }
 @media screen and (max-width: 540px) {
+  .forecast-options-list {
+    margin-left: 135px;
+    width: 39%;
+  }
   .forecast-container {
     height: 840px;
   }
@@ -1263,7 +1276,11 @@
     font-size: 17px;
   }
 }
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 425px) {
+  .forecast-options-list {
+    margin-left: 94px;
+    width: 44%;
+  }
   .forecast-container {
     height: 890px;
   }
@@ -1379,7 +1396,7 @@
     height: 105px;
   }
   .forecast-cloud-images {
-    height: 17.5vh;
+    height: 18vh;
     margin-top: 270px;
   }
   .one-cloud-img {
@@ -1422,8 +1439,15 @@
   .forecast-container {
     height: 910px;
   }
+  .forecast-options-list {
+    margin-left: 92px;
+  }
 }
 @media screen and (max-width: 394px) {
+  .forecast-options-list {
+    margin-left: 84px;
+    width: 47%;
+  }
   .forecast-container {
     height: 850px;
   }
@@ -1447,6 +1471,10 @@
   }
 }
 @media screen and (max-width: 376px) {
+  .forecast-options-list {
+    margin-left: 87px;
+    width: 43%;
+  }
   .forecast-top {
     font-size: 10px;
   }
@@ -1481,5 +1509,119 @@
   }
   .sunrise-sunset {
     height: 39vh;
+  }
+}
+@media screen and (max-width: 376px) {
+  .forecast-container {
+    height: 850px;
+  }
+  .forecast-options-list {
+    margin-left: 82px;
+  }
+  .forecast-cloud-images {
+    margin-top: 260px;
+    height: 23vh;
+  }
+}
+@media screen and (max-width: 320px) {
+  .forecast-top {
+    font-size: 9px;
+  }
+  .forecast-top h4 {
+    font-size: 15px;
+  }
+  .forecast-top h3 {
+    font-size: 11px;
+  }
+  .forecast-options-list {
+    margin-left: 79px;
+    width: 40%;
+  }
+  .feels-like .box-img-title {
+    font-size: 14px;
+  }
+  .feels-like .box-info {
+    font-size: 18px;
+  }
+  .feels-like {
+    margin-top: 130px;
+  }
+  .forecast-wind .box-img-title {
+    font-size: 14px;
+  }
+  .forecast-wind .box-info {
+    font-size: 18px;
+  }
+  .forecast-wind {
+    margin-top: 130px;
+  }
+  .forecast-humidity .box-img-title {
+    font-size: 14px;
+  }
+  .forecast-humidity .box-info {
+    font-size: 18px;
+  }
+  .forecast-humidity {
+    margin-top: 130px;
+  }
+  .pressure {
+    font-size: 11px;
+  }
+  .visibility {
+    font-size: 11px;
+  }
+  .precipitation {
+    font-size: 11px;
+  }
+  .sunrise-sunset {
+    font-size: 11px;
+    height: 38vh;
+  }
+  .sunrise, .sunset {
+    font-size: 12px;
+    width: 75%;
+  }
+  .sunrise svg, .sunset svg {
+    width: 28px;
+    height: 28px;
+  }
+  .right-part-search-input {
+    max-width: 13vw;
+  }
+  .right-part-search-button {
+    max-width: 13vw;
+    font-size: 10px;
+  }
+  .forecast-input-button {
+    margin-top: 38px;
+  }
+  .forecast-cloud-images {
+    height: 17vh;
+  }
+  .forecast-cloud-images img {
+    width: 85px;
+    height: 85px;
+  }
+}
+@media screen and (min-width: 2500px) {
+  .forecast-cloud-images {
+    margin-top: 100px;
+    height: 19vh;
+  }
+  .forecast-cloud-images img {
+    width: 160px;
+    height: 160px;
+  }
+  .forecast-location-details {
+    height: 29vh;
+  }
+  .forecast-location-details h4 {
+    font-size: 70px;
+  }
+  .forecast-location-description {
+    font-size: 22px;
+  }
+  .forecast-location-description-black {
+    color: black;
   }
 }/*# sourceMappingURL=App.css.map */
