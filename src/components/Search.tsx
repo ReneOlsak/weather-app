@@ -40,7 +40,7 @@ const Search = ({
             {inputOptions.map((option: optionType, index: number) => (
               <li key={option.name + '-' + index}>
                 <button onClick={() => onSelect(option)} className="one-option">
-                  {option.name}
+                  {option.name}, {option.country}
                 </button>
               </li>
             ))}

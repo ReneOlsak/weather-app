@@ -1,0 +1,93 @@
+.forecast-right-part {
+  background-color: rgb(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 1px rgb(184, 184, 184);
+  backdrop-filter: blur(10px);
+  border-top-right-radius: 1%;
+  border-bottom-right-radius: 1%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 19vw;
+}
+
+.forecast-input-button {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  margin: 10% 8%;
+}
+
+.right-part-search-input {
+  width: 7vw;
+  height: 2.5vh;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  outline: none;
+  border: 1px solid rgb(184, 184, 184);
+  box-shadow: 0px 0px 1px rgb(184, 184, 184);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.forecast-options-list {
+  z-index: 2;
+  position: absolute;
+  background-color: rgb(255, 255, 255, 0.9);
+  border-radius: 1%;
+  top: 2.8vh;
+  right: 5vw;
+  left: 2px;
+  box-shadow: 0px 0px 3px rgb(184, 184, 184);
+  list-style-type: none;
+}
+
+.right-part-search-button {
+  @include basic-background;
+  background-color: transparent;
+  border: 1px solid rgb(184, 184, 184);
+  border-left: none;
+  box-shadow: 0px 0px 1px rgb(184, 184, 184);  
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 0px 6px;
+  cursor: pointer;
+}
+
+.forecast-location-right {
+  position: absolute;
+  margin-top: 10px;
+}
+
+.forecast-location-main-temp {
+  font-size: 45px;
+  margin-top: -30px;
+}
+
+.forecast-location-description {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.forecast-location-img {
+  width: 8vw;
+  margin-top: 5px;
+}
+
+.forecast-location-details {
+  background-color: rgb(37, 183, 232);
+  margin: 0% 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+}
+
+.forecast-location-description-black {
+  color: black;
+}
+
+// Feels-like starting in right-bottom scss

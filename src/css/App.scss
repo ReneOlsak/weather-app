@@ -1,111 +1,27 @@
+@import 'variables.scss';
+@import 'styling/Search-page';
+@import 'styling/Forecast-full';
+@import 'styling/Forecast-left-top-part';
+@import 'styling/Forecast-left-bottom-part';
+@import 'styling/Forecast-right-top-part';
+@import 'styling/Forecast-right-bottom-part';
+
 * {
   padding: 0;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .app {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   min-height: 100vh;
 }
 
-.app-box {
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 0px 1px rgb(184, 184, 184);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 1%;
-  color: black;
-  display: flex;
-  height: 80vh;
-  width: 65vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-width: 280px;
-}
+// ---MEDIAS---
 
-.title {
-  font-weight: 100;
-  font-size: 4rem;
-}
-
-.title-forecast {
-  font-weight: 900;
-}
-
-.title-info {
-  font-weight: 100;
-  font-size: 1.5rem;
-}
-
-.app-input {
-  margin-top: 10px;
-  padding: 6px 8px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  border: 1px solid rgb(184, 184, 184);
-  box-shadow: 0px 0px 1px rgb(184, 184, 184);
-  outline: none;
-  transition: 0.1s;
-}
-
-.app-input:hover {
-  box-shadow: 0px 0px 3px rgb(184, 184, 184);
-}
-
-.search-button {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  border: 1px solid rgb(184, 184, 184);
-  border-left: none;
-  box-shadow: 0px 0px 1px rgb(184, 184, 184);
-  padding: 6px 8px;
-  background-color: transparent;
-  transition: 0.1s;
-  cursor: pointer;
-}
-
-.search-button:hover {
-  box-shadow: 0px 0px 3px rgb(184, 184, 184);
-}
-
-.input-container {
-  position: relative;
-}
-
-.options-list {
-  position: absolute;
-  background-color: white;
-  border-radius: 1%;
-  left: 1px;
-  right: 1px;
-  border-top: none;
-  box-shadow: 0px 0px 3px rgb(184, 184, 184);
-  list-style-type: none;
-}
-
-.one-option {
-  font-weight: 100;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 0.9rem;
-  cursor: pointer;
-  border: none;
-  background-color: inherit;
-  width: 100%;
-  text-align: left;
-  margin: 0px 0px;
-  padding: 3px 10px;
-}
-
-.one-option:hover {
-  background-color: rgb(255, 240, 247);
-}
-
+// Search-page media
 @media screen and (max-width: 1000px) {
   .title {
     font-size: 3.5rem;
@@ -142,469 +58,8 @@
     height: 95vh;
   }
 }
-.forecast-container {
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 0px 1px rgb(184, 184, 184);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 1%;
-  display: flex;
-  height: 80vh;
-  width: 62.5vw;
-}
 
-.forecast-top {
-  margin: 4%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.forecast-cloud-images {
-  display: flex;
-  overflow-x: scroll;
-  max-width: 42vw;
-  margin-left: 4%;
-  height: 190px;
-  text-align: center;
-}
-
-.forecast-cloud-images::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-.forecast-cloud-images::-webkit-scrollbar-thumb {
-  background: lightgrey;
-  border-radius: 20px;
-}
-
-.forecast-cloud-images::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
-}
-
-.forecast-cloud-images img {
-  width: 120px;
-  height: 120px;
-  margin-right: 10px;
-}
-
-.forecast-top h3 {
-  font-weight: 100;
-  font-size: 1.1rem;
-}
-
-.date {
-  font-size: 1.4rem;
-  font-weight: 100;
-}
-
-.boxes-container {
-  display: flex;
-  gap: 15px;
-}
-
-.left-boxes {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin-left: 4%;
-  margin-top: 20px;
-  gap: 15px;
-}
-
-.pressure {
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 0px 1px rgb(184, 184, 184);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 1%;
-  height: 12vh;
-  display: flex;
-  color: rgb(63, 60, 62);
-}
-
-.pressure .box-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: right;
-  margin-left: 5%;
-  margin-right: 6%;
-  width: 100%;
-}
-
-.pressure svg {
-  height: 50px;
-  width: 50px;
-  margin-right: 12px;
-}
-
-.pressure .box-info-description {
-  margin-left: 40px;
-}
-
-.visibility {
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 0px 1px rgb(184, 184, 184);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 1%;
-  height: 12vh;
-  display: flex;
-  color: rgb(63, 60, 62);
-}
-
-.visibility .box-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: right;
-  margin-left: 5%;
-  margin-right: 6%;
-  width: 100%;
-}
-
-.visibility svg {
-  height: 50px;
-  width: 50px;
-  margin-right: 12px;
-}
-
-.visibility .box-info-description {
-  margin-left: 40px;
-}
-
-.precipitation {
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 0px 1px rgb(184, 184, 184);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 1%;
-  height: 12vh;
-  display: flex;
-  color: rgb(63, 60, 62);
-}
-
-.precipitation .box-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: right;
-  margin-left: 5%;
-  margin-right: 6%;
-  width: 100%;
-}
-
-.precipitation svg {
-  height: 50px;
-  width: 50px;
-  margin-right: 12px;
-}
-
-.precipitation .box-info-description {
-  margin-left: 40px;
-}
-
-.sunrise-sunset {
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 0px 1px rgb(184, 184, 184);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 1%;
-  margin-top: 20px;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.sunrise-sunset-title {
-  margin-top: 15px;
-}
-
-.sunrise, .sunset {
-  border-radius: 10px;
-  margin-top: 10px;
-  background-color: rgb(245, 234, 207);
-  width: 80%;
-  height: 9vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 15px;
-  font-size: 22px;
-  color: rgb(41, 132, 222);
-}
-
-.sunrise-info {
-  color: rgb(63, 60, 62);
-}
-
-.sunset-info {
-  color: rgb(63, 60, 62);
-}
-
-.sunrise svg, .sunset svg {
-  width: 60px;
-  height: 60px;
-  color: gold;
-}
-
-.forecast-right-part {
-  background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0px 0px 1px rgb(184, 184, 184);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-top-right-radius: 1%;
-  border-bottom-right-radius: 1%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 19vw;
-}
-
-.forecast-input-button {
-  position: relative;
-  display: flex;
-  justify-content: left;
-  margin: 10% 8%;
-}
-
-.right-part-search-input {
-  width: 7vw;
-  height: 2.5vh;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
-  outline: none;
-  border: 1px solid rgb(184, 184, 184);
-  box-shadow: 0px 0px 1px rgb(184, 184, 184);
-  padding-left: 12px;
-  padding-right: 12px;
-}
-
-.forecast-location-right {
-  position: absolute;
-  margin-top: 10px;
-}
-
-.forecast-location-main-temp {
-  font-size: 45px;
-  margin-top: -30px;
-}
-
-.forecast-location-description {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-weight: 500;
-}
-
-.forecast-location-img {
-  width: 8vw;
-  margin-top: 5px;
-}
-
-.max-min-temp {
-  margin-bottom: 18px;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  font-size: 25px;
-}
-
-.right-part-search-button {
-  background-color: transparent;
-  border: 1px solid rgb(184, 184, 184);
-  border-left: none;
-  box-shadow: 0px 0px 1px rgb(184, 184, 184);
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 0px 1px rgb(184, 184, 184);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 1%;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  padding: 0px 6px;
-  cursor: pointer;
-}
-
-.box-img-title {
-  display: flex;
-  align-items: center;
-}
-
-.forecast-location-details {
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 0px 1px rgb(184, 184, 184);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 1%;
-  background-color: rgb(37, 183, 232);
-  margin: 0% 8%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  border-radius: 10px;
-}
-
-.forecast-wind {
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 0px 1px rgb(184, 184, 184);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 1%;
-  color: white;
-  margin: 7% 8%;
-  background-color: rgb(255, 97, 136);
-  border-radius: 10px;
-  padding: 4%;
-}
-
-.forecast-wind .box-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.forecast-wind svg {
-  width: 50px;
-  height: 50px;
-}
-
-.forecast-wind .box-img-title {
-  flex-direction: column;
-  margin-left: 10px;
-}
-
-.forecast-wind .box-info-description {
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.feels-like {
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 0px 1px rgb(184, 184, 184);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 1%;
-  margin: 7% 8%;
-  color: white;
-  background-color: rgb(255, 125, 49);
-  border-radius: 10px;
-  padding: 4%;
-}
-
-.feels-like .box-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.feels-like svg {
-  width: 50px;
-  height: 50px;
-}
-
-.feels-like .box-img-title {
-  flex-direction: column;
-}
-
-.feels-like .box-info-description {
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.forecast-humidity {
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 0px 1px rgb(184, 184, 184);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 1%;
-  margin: 7% 8%;
-  color: white;
-  background-color: rgb(255, 172, 62);
-  border-radius: 10px;
-  padding: 4%;
-}
-
-.forecast-humidity .box-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.forecast-humidity svg {
-  width: 50px;
-  height: 50px;
-}
-
-.forecast-humidity .box-img-title {
-  flex-direction: column;
-  margin-left: 4px;
-}
-
-.forecast-humidity .box-info-description {
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.high-low-temp {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.max, .min {
-  background-color: rgb(207, 185, 151);
-  width: 8vw;
-  height: 7vh;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: black;
-}
-
-.min {
-  background-color: rgb(63, 60, 62);
-  color: white;
-}
-
-.max-color {
-  color: rgb(207, 185, 151);
-}
-
-.min-color {
-  color: rgb(63, 60, 62);
-}
-
-.forecast-options-list {
-  z-index: 2;
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 1%;
-  top: 2.8vh;
-  right: 5vw;
-  left: 2px;
-  border-top: none;
-  box-shadow: 0px 0px 3px rgb(184, 184, 184);
-  list-style-type: none;
-}
-
-.forecast-left-part {
-  max-width: 43vw;
-  z-index: 1;
-}
-
+// Forecast-page media
 @media screen and (max-width: 1650px) {
   .precipitation {
     font-size: 14px;
@@ -615,7 +70,7 @@
   .pressure {
     font-size: 14px;
   }
-  .sunrise, .sunset {
+  .sunrise {
     font-size: 20px;
   }
   .max-min-temp {
@@ -646,7 +101,7 @@
   .pressure {
     font-size: 12px;
   }
-  .sunrise, .sunset {
+  .sunrise {
     font-size: 18px;
   }
   .max-min-temp {
@@ -683,9 +138,6 @@
   .forecast-cloud-images {
     max-width: 44.5vw;
   }
-  .sunrise-sunset {
-    height: 45.5vh;
-  }
   .pressure {
     height: 14vh;
   }
@@ -708,7 +160,7 @@
     width: 9vw;
     margin-top: 15px;
   }
-  .sunrise, .sunset {
+  .sunrise {
     height: 10vh;
   }
 }
@@ -717,9 +169,11 @@
     height: 86vh;
     width: 78vw;
   }
+
   .forecast-cloud-images {
     max-width: 53vw;
   }
+
   .forecast-right-part {
     width: 23vw;
   }
@@ -727,23 +181,29 @@
     max-width: 53vw;
     width: 100%;
   }
+
   .sunrise-sunset {
     height: 47vh;
   }
+
   .pressure {
     height: 14.5vh;
   }
+
   .visibility {
     height: 14.5vh;
   }
+
   .precipitation {
     height: 14.5vh;
   }
+
   .pressure svg {
     width: 35px;
     height: 35px;
     margin-right: 6px;
   }
+
   .visibility svg {
     width: 35px;
     height: 35px;
@@ -754,14 +214,17 @@
     height: 35px;
     margin-right: 6px;
   }
+
   .forecast-location-details {
     height: 32vh;
   }
+
   .forecast-location-img {
     width: 10vw;
     margin-top: 22px;
   }
-  .sunrise, .sunset {
+
+  .sunrise {
     height: 10vh;
   }
 }
@@ -777,9 +240,11 @@
   .pressure {
     height: 15.5vh;
   }
+
   .visibility {
     height: 15.5vh;
   }
+
   .precipitation {
     height: 15.5vh;
   }
@@ -821,7 +286,7 @@
   .sunrise-sunset {
     font-size: 12px;
   }
-  .sunrise, .sunset {
+  .sunrise {
     font-size: 15px;
   }
   .sunset {
@@ -863,10 +328,6 @@
     height: 39.5vh;
   }
 }
-.one-cloud-img {
-  font-weight: 500;
-}
-
 @media screen and (max-width: 912px) {
   .forecast-container {
     width: 98.5vw;
@@ -884,8 +345,7 @@
     justify-content: center;
     width: 100%;
     box-shadow: none;
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
+    backdrop-filter: none;
     border-top-right-radius: 0%;
     border-bottom-right-radius: 0%;
   }
@@ -917,8 +377,7 @@
     background: none;
     box-shadow: none;
     border: none;
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
+    backdrop-filter: none;
     margin-top: -120px;
     font-size: 25px;
     line-height: 35px;
@@ -1021,15 +480,15 @@
     font-size: 21px;
     margin-right: 4%;
   }
-  .sunrise, .sunset {
+  .sunrise {
     height: 8vh;
     font-size: 24px;
   }
-  .sunrise svg, .sunset svg {
+  .sunrise svg {
     width: 70px;
     height: 70px;
   }
-  .max, .min {
+  .max {
     width: 17vw;
     font-size: 25px;
     height: 5vh;
@@ -1071,18 +530,23 @@
   .forecast-humidity {
     margin-top: 80px;
   }
+
   .forecast-cloud-images {
     height: 18vh;
   }
+
   .pressure {
     font-size: 21px;
   }
+
   .visibility {
     font-size: 21px;
   }
+
   .precipitation {
     font-size: 21px;
   }
+
   .sunrise-sunset {
     height: 37vh;
   }
@@ -1134,14 +598,14 @@
     font-size: 20px;
     height: 37.3vh;
   }
-  .sunrise, .sunset {
+  .sunrise {
     font-size: 22px;
   }
-  .sunrise svg, .sunset svg {
+  .sunrise svg {
     width: 60px;
     height: 60px;
   }
-  .max, .min {
+  .max {
     font-size: 22px;
   }
 }
@@ -1265,14 +729,14 @@
     font-size: 15px;
     height: 38.5vh;
   }
-  .sunrise, .sunset {
+  .sunrise {
     font-size: 17px;
   }
-  .sunrise svg, .sunset svg {
+  .sunrise svg {
     width: 40px;
     height: 40px;
   }
-  .max, .min {
+  .max {
     font-size: 17px;
   }
 }
@@ -1424,14 +888,14 @@
     font-size: 13px;
     height: 37.8vh;
   }
-  .sunrise, .sunset {
+  .sunrise {
     font-size: 15px;
   }
-  .sunrise svg, .sunset svg {
+  .sunrise svg {
     width: 35px;
     height: 35px;
   }
-  .max, .min {
+  .max {
     font-size: 15px;
   }
 }
@@ -1523,6 +987,17 @@
     height: 23vh;
   }
 }
+@media screen and (max-width: 376px) and (min-height: 850px) {
+  .forecast-container {
+    height: 870px;
+  }
+  .sunrise-sunset {
+    height: 38vh;
+  }
+  .forecast-options-list {
+    margin-left: 87px;
+  }
+}
 @media screen and (max-width: 320px) {
   .forecast-top {
     font-size: 9px;
@@ -1577,11 +1052,11 @@
     font-size: 11px;
     height: 38vh;
   }
-  .sunrise, .sunset {
+  .sunrise {
     font-size: 12px;
     width: 75%;
   }
-  .sunrise svg, .sunset svg {
+  .sunrise svg {
     width: 28px;
     height: 28px;
   }
@@ -1621,7 +1096,4 @@
   .forecast-location-description {
     font-size: 22px;
   }
-  .forecast-location-description-black {
-    color: black;
-  }
-}/*# sourceMappingURL=App.css.map */
+}

@@ -1,0 +1,67 @@
+.forecast-wind {
+  @include forecast-right-part-boxes;
+  background-color: rgb(255, 97, 136);
+}
+
+.forecast-wind .box-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.forecast-wind svg {
+  @include forecast-right-part-boxes-svg;
+}
+
+.forecast-wind .box-img-title {
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.forecast-wind .box-info-description {
+  @include box-info-description;
+}
+
+.feels-like {
+  @include forecast-right-part-boxes;
+  background-color: rgb(255, 125, 49);
+}
+
+.feels-like .box-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feels-like svg {
+  @include forecast-right-part-boxes-svg;
+}
+
+.feels-like .box-img-title {
+  flex-direction: column;
+}
+
+.feels-like .box-info-description {
+  @include box-info-description;
+}
+
+.forecast-humidity {
+  @include forecast-right-part-boxes;
+  background-color: rgb(255, 172, 62);
+}
+
+.forecast-humidity .box-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.forecast-humidity svg {
+  @include forecast-right-part-boxes-svg;
+}
+
+.forecast-humidity .box-img-title {
+  flex-direction: column;
+  margin-left: 4px;
+}
+
+.forecast-humidity .box-info-description {
+  @include box-info-description;
+}

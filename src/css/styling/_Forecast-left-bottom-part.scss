@@ -1,0 +1,148 @@
+.boxes-container {
+  display: flex;
+  gap: 15px;
+}
+
+.left-boxes {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 4%;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.pressure {
+  @include basic-background;
+  @include boxes-height-color
+}
+
+.pressure .box-container {
+  @include box-container;
+}
+
+.pressure svg {
+  @include boxes-svg
+}
+
+.pressure .box-info-description {
+  @include boxes-info-description-margin
+}
+
+.visibility {
+  @include basic-background;
+  @include boxes-height-color
+}
+
+.visibility .box-container {
+  @include box-container;
+}
+
+.visibility svg {
+  @include boxes-svg
+}
+
+.visibility .box-info-description {
+  @include boxes-info-description-margin
+}
+
+.precipitation {
+  @include basic-background;
+  @include boxes-height-color
+}
+
+.precipitation .box-container {
+  @include box-container;
+}
+
+.precipitation svg {
+  @include boxes-svg
+}
+
+.precipitation .box-info-description {
+  @include boxes-info-description-margin
+}
+
+.sunrise-sunset {
+  @include basic-background;
+  margin-top: 20px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sunrise-sunset-title {
+  margin-top: 15px;
+}
+
+.sunrise {
+  border-radius: 10px;
+  margin-top: 10px;
+  background-color: rgb(245, 234, 207);
+  width: 80%;
+  height: 9vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+  font-size: 22px;
+  color: rgb(41, 132, 222);
+}
+
+.sunrise-info {
+  color: $boxes-color;
+}
+
+.sunset-info {
+  color: $boxes-color;
+}
+
+.sunrise svg {
+  width: 60px;
+  height: 60px;
+  color: gold;
+}
+
+.sunset {
+  @extend .sunrise;
+}
+
+.max-min-temp {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 25px;
+}
+
+.high-low-temp {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.max {
+  background-color: rgba(207, 185, 151);
+  width: 8vw;
+  height: 7vh;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $text-color
+}
+
+.min {
+  @extend .max;
+  background-color: rgb(63, 60, 62);  
+  color: white;
+}
+
+.max-color {
+  color: rgba(207, 185, 151);
+}
+
+.min-color {
+  color: rgb(63, 60, 62);
+}

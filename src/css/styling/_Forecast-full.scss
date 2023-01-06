@@ -1,0 +1,11 @@
+.forecast-container {
+  @include basic-background;
+  display: flex;
+  height: 80vh;
+  width: 62.5vw;
+}
+
+.box-img-title {
+  display: flex;
+  align-items: center;
+}

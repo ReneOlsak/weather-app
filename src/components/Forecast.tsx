@@ -152,6 +152,9 @@ const Forecast = ({
           </div>
         </section>
       </div>
+
+      {/* Right Part */}
+
       <div className="forecast-right-part">
         <div className="forecast-input-button">
           <input
@@ -168,7 +171,7 @@ const Forecast = ({
             {inputOptions.map((option: optionType, index: number) => (
               <li key={option.name + '-' + index}>
                 <button onClick={() => onSelect(option)} className="one-option">
-                  {option.name}
+                  {option.name}, {option.country}
                 </button>
               </li>
             ))}

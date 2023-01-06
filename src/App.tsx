@@ -1,4 +1,4 @@
-import './App.scss'
+import './css/App.scss'
 import useWeather from './Hooks/useWeather'
 import Search from './components/Search'
 import Forecast from './components/Forecast'

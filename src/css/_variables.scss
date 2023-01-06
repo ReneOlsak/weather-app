@@ -1,8 +1,7 @@
 $text-color: black;
-
 $hover-color: 0px 0px 3px rgb(184, 184, 184);
-
 $light-color: white;
+$boxes-color: rgb(63, 60, 62);
 
 @mixin basic-text {
   font-weight: 100;
@@ -41,4 +40,33 @@ $light-color: white;
   margin-left: 5%;
   margin-right: 6%;
   width: 100%;
+}
+
+@mixin boxes-svg {
+  height: 50px;
+  width: 50px;
+  margin-right: 12px;
+}
+
+@mixin boxes-height-color {
+  height: 12vh;
+  display: flex;
+  color: $boxes-color;
+}
+
+@mixin boxes-info-description-margin {
+  margin-left: 40px;
+}
+
+@mixin forecast-right-part-boxes {
+  @include basic-background;
+  color: white;
+  margin: 6% 8%;
+  border-radius: 10px;
+  padding: 4%;
+}
+
+@mixin forecast-right-part-boxes-svg {
+  width: 50px;
+  height: 50px;
 }

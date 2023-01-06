@@ -1,0 +1,84 @@
+.app-box {
+  @include basic-background;
+  color: $text-color;
+  height: 80vh;
+  width: 65vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+}
+
+.title {
+  font-weight: 100;
+  font-size: 4rem;
+}
+
+.title-forecast {
+  font-weight: 900;
+}
+
+.title-info {
+  font-weight: 100;
+  font-size: 1.5rem;
+}
+
+.app-input {
+  margin-top: 10px;
+  padding: 6px 8px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border: 1px solid rgb(184, 184, 184);
+  box-shadow: 0px 0px 1px rgb(184, 184, 184);
+  outline: none;
+  transition: 0.1s;
+}
+
+.app-input:hover {
+  box-shadow: $hover-color;
+}
+
+.search-button {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border: 1px solid rgb(184, 184, 184);
+  border-left: none;
+  box-shadow: 0px 0px 1px rgb(184, 184, 184);
+  padding: 6px 8px;
+  background-color: transparent;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  box-shadow: $hover-color;
+}
+
+.input-container {
+  position: relative;
+}
+
+.options-list {
+  position: absolute;
+  background-color: $light-color;
+  border-radius: 1%;
+  left: 1px;
+  right: 1px;
+  border-top: none;
+  box-shadow: 0px 0px 3px rgb(184, 184, 184);
+  list-style-type: none;
+}
+
+.one-option {
+  @include basic-text;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  width: 100%;
+  text-align: left;
+  padding: 3px 10px;
+}
+
+.one-option:hover {
+  background-color: rgba(255, 240, 247);
+}
