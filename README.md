@@ -1,5 +1,5 @@
 <a name="readme-top"></a>
-# Weather-app
+# Weather app
 
 Weather app project with API, where you can search a place and find out its forecast.
 
